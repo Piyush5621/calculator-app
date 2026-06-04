@@ -34,7 +34,7 @@ pipeline{
                 script{
                     docker.withRegistry(
                         'http://index.docker.io/v1/',
-                        'dockerhub-creds'
+                        'dockerhub-calculator'
                     ){
                         docker.image("${IMAGE_NAME}:latest").push()
                     }
