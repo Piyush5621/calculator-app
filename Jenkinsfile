@@ -33,7 +33,7 @@ pipeline{
             steps{
                 script{
                     docker.withRegistry(
-                        'http://index.docker.io/v1/',
+                        'https://index.docker.io/v1/',
                         'dockerhub-calculator'
                     ){
                         docker.image("${IMAGE_NAME}:latest").push()
